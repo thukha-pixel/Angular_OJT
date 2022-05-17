@@ -1,0 +1,43 @@
+<div [ngStyle]="{display: showNav}">
+  <mat-toolbar color="accent">
+    <mat-toolbar-row>
+      <button mat-icon-button>
+        <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+      </button>
+      <h1>CRUD form </h1>
+
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav opened="true" mode="side">
+      <mat-nav-list>
+        <a routerLink="/register" mat-list-item>Register</a>
+        <a routerLink="/users" mat-list-item>User List</a>
+        <a mat-list-item>Logout</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div style="height:88vh;">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
+
+<div [ngStyle]="{display: hideLogin}">
+
+<form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput placeholder="Email" formControlName="email" required="">
+  </mat-form-field><br>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Password</mat-label>
+    <input matInput placeholder="Password" type="password" formControlName="password">
+  </mat-form-field><br>
+  <button type="button" (click)="Login()">Login</button>
+</form>
+  
+</div>
