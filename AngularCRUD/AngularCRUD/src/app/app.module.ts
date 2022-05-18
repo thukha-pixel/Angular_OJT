@@ -6,15 +6,15 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { UserListComponent } from './user-list/user-list.component';
-import { RegisterFormComponent } from './register-form/register-form.component';
-import { HomeComponent } from './home/home.component';
+import { RegisterFormComponent} from './register-form/register-form.component';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
-    RegisterFormComponent,
-    HomeComponent
+ RegisterFormComponent,
+ LoginFormComponent
   ],
   imports: [
     BrowserModule,
